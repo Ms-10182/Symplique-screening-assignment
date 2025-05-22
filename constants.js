@@ -1,0 +1,1 @@
+export const dbName = "remind_me_later"
