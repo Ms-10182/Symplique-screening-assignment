@@ -3,6 +3,7 @@ import { Router } from "express";
 
 const router = Router()
 
-router.route("/").get(getUpcomingReminders).post(setReminder)
+router.route("/").post(setReminder)
+router.route("/:date/:time").get(getUpcomingReminders)
 
 export default router
