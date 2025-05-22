@@ -47,7 +47,7 @@ const setReminder = asynchandler(async (req, res) => {
 });
 
 const getUpcomingReminders = asynchandler(async (req, res) => {
-  const { date, time } = req.body;
+  const { date, time } = req.params;
   if ([date, time].some((item) => !item || item.trim() === "")) {
     throw new ApiError(400, "both date and time are required");
   }
